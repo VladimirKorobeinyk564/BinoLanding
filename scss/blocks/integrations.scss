@@ -1,0 +1,91 @@
+.integrations{
+	background: $whiteGray;
+	padding: 146px 0 135px;
+	border-bottom: 1px solid #D6D7D9;
+
+	.integrations_info{
+		text-align: center;
+
+		.integrations_title{
+			font-size: 36px;
+			font-weight: 700;
+			font-family: 'Source Sans Pro', sans-serif;
+			letter-spacing: 3.6px;
+			color: $gray;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			line-height: 34px;
+		}
+
+		p{
+			font-size: 14px;
+			font-family: 'Open Sans', sans-serif;
+			line-height: 21px;
+			color: $grayText;
+		}
+	}
+
+	.integrations_cards{
+		margin-top: 50px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.integrations_card{
+			position: relative;
+			flex-basis: 17%;
+			background: $white;
+			margin: 15px;
+			height: 101px;
+			box-shadow: 0 0 10px #EFEFF3;
+
+			img{
+				position: relative;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.integrations{
+
+		.integrations_cards{
+
+			.integrations_card{
+				flex-basis: 22%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.integrations{
+
+		.integrations_cards{
+
+			.integrations_card{
+				flex-basis: 35%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.integrations{
+		padding: 100px 0;
+
+		.integrations_cards{
+
+			.integrations_card{
+				flex-basis: 40%;
+				margin: 8px;
+				padding: 4px;
+			}
+		}
+	}
+}

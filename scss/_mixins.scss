@@ -1,0 +1,79 @@
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@mixin btn($bg: $orange){
+	width: 225px;
+	background: $bg;
+	border: 2px solid $bg;
+	line-height: 16px;
+	border-radius: 3px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .25); 
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	text-align: center;
+	letter-spacing: 0.14px;
+	padding: 18px 0;
+	box-sizing: border-box;
+	transition: all .5s;
+	@content;
+
+	&:hover{
+		background: #B5463E;
+		color: #E5E4EA;
+		border: 2px solid #B5463E;
+	}
+
+	&:active{
+		background: #8E3731;
+		color: #C4C4C4;
+		border: 2px solid #8E3731;
+	}
+}
+
+@mixin devider($color-line: $whiteGray){
+	display: block;
+	width: 7px;
+	position: relative;
+	margin: 20px auto;
+
+	p{
+		text-align: center;
+
+		&::after{
+			content: '';
+			display: block;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background: $orange;
+		}
+	}
+
+	&::after, &::before{
+		content: '';
+		width: 80px;
+		height: 1px;
+		background: $ligthGray;
+		display: block;
+		position: absolute;
+		top: 50%;
+		text-transform: translateY(-1px);
+	}
+
+	&::before{
+		left: -90px;
+	}
+
+	&::after{
+		right: -90px;
+	}
+}

@@ -1,0 +1,26 @@
+.buttons{
+	position: relative;
+	z-index: 2;
+	margin-top: 58px;
+
+	a{
+		@include btn();
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+
+	.second_btn{
+		background: transparent;
+		border: 2px solid #FEFEFE;
+
+		&:hover{
+			background: transparent;
+			color: #E5E4EA;
+		}
+
+		&:active{
+			background: transparent;
+			color: #C4C4C4;
+		}
+	}
+}

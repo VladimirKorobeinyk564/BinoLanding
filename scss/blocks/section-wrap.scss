@@ -1,0 +1,43 @@
+.section-wrap_icon{
+	position: relative;
+
+	a{
+		width: 65px;
+		height: 65px;
+		position: absolute;
+		left: 50%;
+		bottom: 62px;
+		transform: translate(-50%, 0) !important;
+		text-align: center; 
+		z-index: 2;
+		background: $whiteGray;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 5px solid rgba(255, 255, 255, 0.25);
+		transition: all 1s;
+
+		img{
+			transform: translateY(-67px);
+		}
+
+		&:before{
+			content: '';
+			width: 84px;
+			height: 84px;
+			background: red;
+			border-radius: 50%;
+			display: block;
+			background: rgba(255, 255, 255, 0.25);
+			position: relative;
+			top: 50%;
+			left: -10px;
+			transform: translateY(-50%);
+			z-index: 1; 
+		}
+
+		&:hover{
+			background: #DAD9DE;
+			box-shadow: 0 0 15px grey;
+		}
+	}
+}

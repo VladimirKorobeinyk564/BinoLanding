@@ -1,0 +1,28 @@
+.menu{
+	ul{
+		display: flex;
+		justify-content: space-between;
+
+		li{
+			line-height: 56px;
+			margin-right: 5px;
+
+
+			a{
+				font-size: 14px;
+				font-weight: 400;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $whiteGray;
+				padding-bottom: 16px;
+				border-bottom: 1px solid transparent;
+				transition: all .5s;
+
+				&:hover{
+					color: $orange;
+					border-bottom: 1px solid $orange;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,263 @@
+.team{
+	padding: 140px 0 370px;
+	background: url('../img/team-line.png') center bottom no-repeat, 
+				url('../img/team-bg.jpg') center no-repeat;
+	background-size: cover;
+	
+	.team_wrap{
+
+		.team_info{
+			text-align: center;
+
+			.team_title{
+				font-size: 36px;
+				font-weight: 700;
+				font-family: 'Source Sans Pro', sans-serif;
+				letter-spacing: 3.6px;
+				color: $white;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+
+			p{
+				font-size: 14px;
+				color: $white;
+			}
+		}
+
+		.team_cards{
+			position: relative;
+			flex-wrap: wrap;
+
+			.team_card{
+				position: absolute;
+
+				&:nth-of-type(1){
+						left: 0;
+						bottom: -120px;
+					}
+
+					&:nth-of-type(2){
+						left: 265px;
+						bottom: -80px;
+					}
+
+					&:nth-of-type(3){
+						left: 530px;
+						bottom: -84px;
+					}
+
+					&:nth-of-type(4){
+						right: 190px;
+						bottom: -122px;
+					}
+
+					&:nth-of-type(5){
+						right: 0px;
+						bottom: -96px;
+					}
+
+
+				.team_man{
+					width: 200px;
+					text-align: center;
+
+					&::after{
+						content: '';
+						width: 1px;
+						height: 50px;
+						background: #C9C6C6;
+						display: block;
+						position: absolute;
+						left: 50%;
+						bottom: -58px;
+						transform: translate(-50%);
+						margin-bottom: 2px;
+						opacity: 0;
+						transition: opacity 0.5s; 
+					}
+
+					&:hover{
+
+						&::after{
+							opacity: 1;
+						}
+
+						.man_info{
+							z-index: 1;
+							opacity: 1;
+						}
+
+						.team_image{
+							transition-property: transform, box-shadow;
+							transition-duration: 0.5s;  
+							transform: scale(1.3);
+							box-shadow: 0 0 10px $black; 
+							z-index: 2;
+
+							&::after{
+								transform: scale(1.3);
+								left: 11%;
+								opacity: 0.5;
+							}
+						}
+					}
+
+					.team_image{
+						width: 51px;
+						height: 51px;
+						border: 3px solid $orange; 
+						border-radius: 50%;
+						overflow: hidden;
+						margin: 0 auto;
+
+						img{
+							display: block;
+							max-width: 100%;	
+						}
+
+						&::after{
+							content: '';
+							width: 52px;
+							height: 52px;
+							background: $orange;
+							position: absolute;
+							border-radius: 50%;
+							top: 3px;
+							left: 37%;
+							opacity: 0;
+						}
+					}
+
+					.man_info{
+						position: absolute;
+						bottom: -160px;
+						width: 100%;
+						opacity: 0;
+						transition: opacity 0.5s;
+
+						p.name{
+							font-size: 24px;
+							letter-spacing: 1.8px;
+							color: $orange; 
+							margin-bottom: 20px;
+						}
+
+						p.profession{
+							font-size: 14px;
+							line-height: 24px;
+							letter-spacing: 1.4px;
+							color: #C9C6C6;
+						}
+					}
+				}
+			}	
+		}
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.team{
+
+		.team_wrap{
+
+			.team_cards{
+
+				.team_card{
+					position: absolute;
+
+					&:nth-of-type(1){
+						left: 0;
+						bottom: -112px;
+					}
+
+					&:nth-of-type(2){
+						left: 230px;
+						bottom: -80px;
+					}
+
+					&:nth-of-type(3){
+						left: 440px;
+						bottom: -82px;
+					}
+
+					&:nth-of-type(4){
+						right: 195px;
+						bottom: -118px;
+					}
+
+					&:nth-of-type(5){
+						right: 0;
+						bottom: -108px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.team{
+		background: url('../img/team-bg.jpg') center no-repeat;
+		background-size: cover;
+		padding: 140px 0;
+
+		.team_wrap{
+
+			.team_cards{
+				display: flex;
+				justify-content: center;
+
+				.team_card{
+					position: relative;
+					left: auto !important;
+					right: auto !important;
+					bottom: auto !important;
+					width: auto !important;
+					margin: 25px 0;
+
+					.team_man{
+
+						&::after{
+							display: none;
+						}
+
+						.man_info{
+							opacity: 1;
+							position: static;
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.team{
+		padding: 100px 0;
+
+		.team_wrap{
+
+			.team_cards{
+				justify-content: center;
+
+				.team_card{
+					margin: 25px 0;
+
+					.team_man{
+
+						.team_image{
+
+							&::after{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		} 
+	}
+}
